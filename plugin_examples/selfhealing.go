@@ -331,7 +331,7 @@ func (s *SHPlugin) getProcessThreads(context plugin.PluginContext, args []string
 					firstIndex = successV.Total
 				}
 				ui.Say("")
-				fmt.Printf("Threads of Process %s : %d - %d (of total %d)\n", pid, firstIndex, lastIndex, successV.Total)
+				fmt.Printf("Threads : %d - %d (of total %d)\n", firstIndex, lastIndex, successV.Total)
 				table := ui.Table([]string{"Thread ID", "Status"})
 				for _, value := range successV.Threads {
 					table.Add(value.Id, value.Status)
